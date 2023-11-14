@@ -5,10 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import heroBg from "@/public/assets/hero-bg.jpg";
 import Button from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
   return (
-    <div className="w-full mt-[200px] 2xl:mt-[260px] 2xl:px-[120px] flex justify-center">
+    <div className="h-full w-full mt-[80px] 2xl:mt-[160px] 2xl:px-[120px] flex flex-col">
       <Image src={heroBg} objectFit="cover" layout="fill" className="-z-10" />
       <div className="bg-black/70 top-0 bottom-0 left-0 right-0 absolute -z-10"></div>
       <div className="flex justify-between items-center w-full px-[50px] xl:px-[100px]">
@@ -47,6 +49,9 @@ const Hero = () => {
           </Link>
         </div>
       </div>
+      <Link href='' className="hidden lg:flex justify-center mt-12 text-white text-4xl cursor-auto">
+        <FontAwesomeIcon icon={faAnglesDown} bounce className="cursor-pointer" />
+      </Link>
     </div>
   );
 };
